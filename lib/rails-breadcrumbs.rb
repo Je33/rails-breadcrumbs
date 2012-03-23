@@ -21,10 +21,8 @@ module Rails
 
     module Helper
 
-      def breadcrumbs(separator = "&rsaquo;")
-        @breadcrumbs.map do |txt, path|
-          link_to_unless (path.blank? || current_page?(path)), h(txt), path
-        end.join(" #{separator} ").html_safe
+      def breadcrumbs
+        @breadcrumbs
       end
 
     end
